@@ -1,0 +1,17 @@
+{
+  "name": "docker-playwright-testing",
+  "version": "1.0.0",
+  "description": "Playwright tests running in Docker containers with GitHub Actions CI",
+  "scripts": {
+    "test": "playwright test",
+    "docker:build": "docker build -t playwright-tests .",
+    "docker:run": "docker run --rm playwright-tests",
+    "docker:compose": "docker-compose up --abort-on-container-exit"
+  },
+  "author": "Darrius Jones",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+﻿version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    container_name: playwright-test-runner
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    environment:
+      - CI=true
